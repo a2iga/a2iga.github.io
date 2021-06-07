@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:og="http://ogp.me/ns#">
+	<head>
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<meta http-equiv="x-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="title" content="a2iga/dev">
+		<meta name="description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://a2iga.github.io/">
+		<meta property="og:title" content="a2iga/dev">
+		<meta property="og:description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="og:image" content="assets/img/banner.jpg">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://a2iga.github.io/">
+		<meta property="twitter:title" content="a2iga/dev">
+		<meta property="twitter:description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="twitter:image" content="assets/img/banner.jpg">
+		<meta name="theme-color" content="#313236">
+		<meta name="msapplication-navbutton-color" content="#313236">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#313236">
+		<link rel="stylesheet" href="build/css/kalium.css">
+		<link rel="stylesheet" href="build/css/styles.css">
+		<link rel="stylesheet" href="_fontello/css/icons.css">
+		<link rel="stylesheet" href="_fontello/css/animation.css">
+		<title>Для разработчиков / A2IGA</title>
+	</head>
+  <body>
+
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-8">
+						<h5>Новости сайта</h5>
+						<template id="news_temp">
+							<p><span id="date" class="text-primary"></span> &ndash; <span id="news"></span></p>
+						</template>
+					</div>
+					<div class="col-12 col-md-4">
+						<h5>Мероприятия</h5>
+						<p disabled><i>В последнее время не было никаких мероприятий.</i></p>
+						<h5>События</h5>
+						<p><span class="text-primary"><дата не назн.></span> &ndash; релиз lib-a2iga 1.0</p>
+					</div>
+					<div class="col-12">
+						<p class="card info"><span class="ic ic-cog"></span> <b>Сайт всё еще в разработке!</b> Возможны какие-либо недочеты и упущенные "Lorem ipsum".</p>
+						<p class="text-muted anim-topToBottom text-align_center"><span class="ic ic-down"></span></p>
+					</div>
+				</div>
+			</div>
+			<br>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h5>Разделы сайта</h5>
+					</div>
+					<div class="col-12 col-md-4">
+						<h2 class="anchor" data-anchor="dev/"><u style="text-decoration-style:wavy;">modules</u></h2>
+						<p>Документация для разработчиков модулей A2IGA, в которой расписана спецификация и стандарты написания модулей.</p>
+						<img src="assets/img/thumb_modules.png" alt="" class="rounded"><br><br>
+						<button onclick="location.href='html/modules.html'">Подробнее <span class="ic ic-right"></span></button>
+					</div>
+					<div class="col-12 col-md-4" disabled>
+						<h2 class="anchor" data-anchor="dev/"><u>lib</u></h2>
+						<p>Документация по библиотеке <a href="https://github.com/a2iga/lib">lib-a2iga</a>, которая должна помочь разработчикам интегрировать свои приложения в A2IGA одной строчкой кода (ну или больше 🧔).</p>
+						<img src="assets/img/thumb_lib.png" alt="" class="rounded"><br><br>
+						<button>Подробнее <span class="ic ic-spin2 animate-spin"></span></button> 
+					</div>
+				</div>
+			</div>
+			<br><br>
+		</main>
+		
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-4 order-md-1">
+						<br>
+						<div class="card">
+							<h5>Тема сайта</h5>
+							<p>Если Вам "бьет" в глаза светлая тема в темноте, то рекомендую сменить тему на тёмную.</p>
+							<div class="group block">
+								<button class="btnSetLightTheme" onclick="setTheme('theme-light')">Светлая</button>
+								<button class="btnSetDarkTheme" onclick="setTheme('theme-dark')">Тёмная</button>
+							</div>
+						</div>
+						<p style="padding: 0 1.2em" class="text-align_center" disabled><span class="ic ic-comment"></span> Тема будет сохранена после закрытия вкладки в памяти браузера.</p>
+					</div>
+					<div class="col-12 col-md-8 order-md-0">
+						<h5>Дополнительно</h5>
+						<p>Если у Вас остались какие-либо еще вопросы, то Вы можете задать их <a href="https://github.com/a2iga/a2iga">тут</a>. Также есть официальный <a href="https://t.me/rx1310_discuss">чат</a> в Telegram, в котором можно пообщаться с разработчиком A2IGA.</p>
+						<p>Исходный код проекта доступен и распространяется на <a href="https://github.com/a2iga">Github</a> бесплатно и под лицензией <a href="https://github.com/a2iga/a2iga/LICENSE">MIT License</a>.</p>
+						<hr>
+						<p>Сайт был написан на базе фреймворка <a href="https://github.com/kalium19">Kalium19</a> версии 0.0.2-alpha. Если нашли ошибку, то отправьте issue в репозиторий проекта.</p>
+						<p disabled>&copy; Haba Kudzaev (rx1310), <span id="currentYear"></span></p>
+						<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="assets/script/k19_themeEngine.js"></script>
+		<script src="assets/script/news.js"></script>
+
+	</body>
+</html>

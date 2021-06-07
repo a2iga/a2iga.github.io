@@ -1,0 +1,12 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2021 | MIT License
+
+@use "sass:map";
+
+@import '_palette';
+
+$scrollbar: var(--scrollbar);
+$scrollbarThumb: var(--scrollbarThumb);
+$scrollbarTrack: $scrollbar;
+
+$defaultFont: 'Open Sans', sans-serif;
+$defaultBorderRadius: 0.8em !default;

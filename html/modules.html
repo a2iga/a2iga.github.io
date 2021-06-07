@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:og="http://ogp.me/ns#">
+	<head>
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<meta http-equiv="x-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="title" content="a2iga/dev">
+		<meta name="description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://a2iga.github.io/">
+		<meta property="og:title" content="a2iga/dev">
+		<meta property="og:description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="og:image" content="assets/img/banner.jpg">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://a2iga.github.io/">
+		<meta property="twitter:title" content="a2iga/dev">
+		<meta property="twitter:description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="twitter:image" content="assets/img/banner.jpg">
+		<meta name="theme-color" content="#313236">
+		<meta name="msapplication-navbutton-color" content="#313236">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#313236">
+		<link rel="stylesheet" href="../build/css/kalium.css">
+		<link rel="stylesheet" href="../build/css/styles.css">
+		<link rel="stylesheet" href="../_fontello/css/icons.css">
+		<title>Для разработчиков / A2IGA</title>
+	</head>
+  <body>
+
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h5>Раздел</h5>
+						<h1><span class="text-primary">dev/</span>modules</h1>
+						<p>Документация для разработчиков модулей A2IGA, в которой расписана спецификация и стандарты написания модулей.</p><br>
+						<div class="group">
+							<button onclick="window.history.back()"><span class="ic ic-left"></span></button>
+							<button class="active"> modules</button>
+						</div>
+						<p class="card info"><span class="ic ic-cog"></span> <b>Сайт всё еще в разработке!</b> Возможны какие-либо недочеты и упущенные "Lorem ipsum".</p>
+					</div>
+				</div>
+			</div>
+			<br>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2>Вступление</h2>
+						<p><b>Модули</b> &mdash; это программы, выполняющие какию-либо конкретную функцию при запуске через A2IGA.</p>
+						<p>С виду модули являются лишь обычными приложениями и меют расширение <em>apk</em>. Модули пишутся на обычных для Android языках программирования - Java, Kotlin и C++.</p>
+						<p>Однако, есть конкретные отличия модулей от обычных приложений. О них расписано ниже.</p>
+						<h3 id="pkgName">Имя пакета</h3>
+						<p>Имя пакета (package name) у модулей должно содержать &QUOT;<u>a2iga.module.&quot;</u> чтобы A2IGA распознал приложение как модуль.</p> 
+						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> com.dev.<b>a2iga.module.</b>name</p>
+						<p title="Можно, конечно, но всё же рекомендуется первый вариант." class="card warning"><span class="ic ic-ok"></span> <b>a2iga.module.</b>modulename</p>
+						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> com.dev.a2igamodule.name</p>
+						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> com.dev.modulename.a2iga.module</p>
+						<h3 id="className">Имена классов</h3>
+						<p>Реализация модулей A2IGA была вдохновлена реализацией расширений GNOME Shell. Поэтому у модулей A2IGA есть две "входные точки":</p>
+						<ol>
+							<li>класс "ModuleLaunch", который должен распологаться в основной дирректории,</li>
+							<p class="card info" style="word-break:break-all;"><span class="ic ic-code"></span> <i>java/com/dev/<b>a2iga/module/</b>modulename/<b>ModuleLaunch.java</b></i></p>
+							<li>класс "ModuleSettings", который должен лежать также рядом с "ModuleLaunch".</li>
+							<p class="card info" style="word-break:break-all;"><span class="ic ic-code"></span> <i>java/com/dev/<b>a2iga/module/</b>modulename/<b>ModuleSettings.java</b></i></p>
+						</ol>
+					</div>
+					<div class="col-12 col-md-6">
+						<h4><span class="ic ic-code"></span> Класс "ModuleLaunch"</h4>
+						<p>Класс <i>ModuleLaunch</i> является основным. По названию понятно, что A2IGA при вызове ассистента запускает именно этот класс, а название класса не должно именяться!</p>
+						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> ModuleLaunch.java (ну или ModuleLaunch.kt)</p>
+						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> ModuleStart.java</p>
+						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> LaunchModule.java</p>
+						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> RunModule.java</p>
+					</div>
+					<div class="col-12 col-md-6">
+						<h4><span class="ic ic-code"></span> Класс "ModuleSettings"</h4>
+						<p>Класс <i>ModuleSettings</i> является также обязательным, т.к. он запускается при нажатии на пункт "Настройки модуля" в A2IGA. Если модуль не содержит настроек, то лучшим решением будет сделать из ModuleSettings DialogFrament и сообщить пользователю о том, что настроек в модуле нет.</p>
+						<p class="text-primary">В A2IGA 10 наличие класса ModuleSettings не обязательно. В новой версии A2IGA появилась обработка ошибки при обращении к несущ. класу ModuleSettings.</p>
+						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> ModuleSettings.java (ну или ModuleSettings.kt)</p>
+						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> ModulePreferences.java</p>
+					</div>
+				</div>
+			</div>
+			<br>
+		</main>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-4 order-md-1">
+						<br>
+						<div class="card">
+							<h5>Тема сайта</h5>
+							<p>Если Вам "бьет" в глаза светлая тема в темноте, то рекомендую сменить тему на тёмную.</p>
+							<div class="group block">
+								<button class="btnSetLightTheme" onclick="setTheme('theme-light')">Светлая</button>
+								<button class="btnSetDarkTheme" onclick="setTheme('theme-dark')">Тёмная</button>
+							</div>
+						</div>
+						<p style="padding: 0 1.2em" class="text-align_center" disabled><span class="ic ic-comment"></span> Тема будет сохранена после закрытия вкладки в памяти браузера.</p>
+					</div>
+					<div class="col-12 col-md-8 order-md-0">
+						<h5>Дополнительно</h5>
+						<p>Если у Вас остались какие-либо еще вопросы, то Вы можете задать их <a href="https://github.com/a2iga/a2iga">тут</a>. Также есть официальный <a href="https://t.me/rx1310_discuss">чат</a> в Telegram, в котором можно пообщаться с разработчиком A2IGA.</p>
+						<p>Исходный код проекта доступен и распространяется на <a href="https://github.com/a2iga">Github</a> бесплатно и под лицензией <a href="https://github.com/a2iga/a2iga/LICENSE">MIT License</a>.</p>
+						<hr>
+						<p>Сайт был написан на базе фреймворка <a href="https://github.com/kalium19">Kalium19</a> версии 0.0.2-alpha. Если нашли ошибку, то отправьте issue в репозиторий проекта.</p>
+						<p disabled>&copy; Haba Kudzaev (rx1310), <span id="currentYear"></span></p>
+						<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="../assets/script/k19_themeEngine.js"></script>
+
+	</body>
+</html>

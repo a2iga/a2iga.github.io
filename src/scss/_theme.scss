@@ -1,0 +1,40 @@
+@use "sass:map";
+
+@import '_palette';
+@import 'function/function';
+
+// ? Основные цвета темы Kalium
+$k-theme: (
+
+	light: (
+		colorPrimary: #1a73e9,
+		colorSecondary: #8ab4f8,
+		colorFont: map-get-strict($grey-palette, 900),
+		colorBackground: map-get-strict($grey-palette, 100),
+		colorSurface: map-get-strict($grey-palette, A100),
+		colorDivider: map-get-strict($grey-palette, A400),
+		scrollbar: map-get-strict($grey-palette, 100),
+		scrollbarThumb: map-get-strict($grey-palette, 900),
+	),
+
+	dark: (
+		colorPrimary: #8ab4f8,
+		colorSecondary: #1a73e9,
+		colorFont: map-get-strict($grey-palette, A100),
+		colorBackground: #202124,
+		colorSurface: #323438,
+		colorDivider: map-get-strict($grey-palette, 800),
+		scrollbar: #202124,
+		scrollbarThumb: map-get-strict($grey-palette, 600),
+	)
+
+);
+
+@each $name, $map in $k-theme {
+	.theme-#{$name} {
+			@each $key, $value in $map {
+					--#{$key}: #{$value};
+			}
+	}
+}
+
