@@ -5,26 +5,27 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="x-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-		<meta name="title" content="a2iga/dev">
-		<meta name="description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta name="title" content="A2IGA">
+		<meta name="description" content="Официальный сайт проекта A2IGA, на котором Вы найдете самые последние новости по развитию проекта, а также документацию для разработчиков.">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://a2iga.github.io/">
-		<meta property="og:title" content="a2iga/dev">
-		<meta property="og:description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="og:title" content="A2IGA">
+		<meta property="og:description" content="Официальный сайт проекта A2IGA, на котором Вы найдете самые последние новости по развитию проекта, а также документацию для разработчиков.">
 		<meta property="og:image" content="assets/img/banner.jpg">
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:url" content="https://a2iga.github.io/">
-		<meta property="twitter:title" content="a2iga/dev">
-		<meta property="twitter:description" content="Полезная информация для разработчиков модулей A2IGA и инструкция по интеграции Вашего приложения с A2IGA.">
+		<meta property="twitter:title" content="A2IGA">
+		<meta property="twitter:description" content="Официальный сайт проекта A2IGA, на котором Вы найдете самые последние новости по развитию проекта, а также документацию для разработчиков.">
 		<meta property="twitter:image" content="assets/img/banner.jpg">
 		<meta name="theme-color" content="#313236">
 		<meta name="msapplication-navbutton-color" content="#313236">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#313236">
-		<link rel="stylesheet" href="../build/css/kalium.css">
-		<link rel="stylesheet" href="../build/css/styles.css">
-		<link rel="stylesheet" href="../fontello/css/icons.css">
-		<title>Для разработчиков / A2IGA</title>
+		<link rel="stylesheet" href="../../../build/css/kalium.css">
+		<link rel="stylesheet" href="../../../build/css/styles.css">
+		<link rel="stylesheet" href="../../../fontello/css/icons.css">
+		<link rel="stylesheet" href="../../../build/css/hljs.css">
+		<title>Модули / Для разработчиков / A2IGA</title>
 	</head>
   <body>
 
@@ -50,12 +51,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2>Вступление</h2>
+						<h2 id="intro">Вступление</h2>
 						<p><b>Модули</b> &mdash; это программы, выполняющие какию-либо конкретную функцию при запуске через A2IGA.</p>
 						<p>С виду модули являются лишь обычными приложениями и меют расширение <em>apk</em>. Модули пишутся на обычных для Android языках программирования - Java, Kotlin и C++.</p>
 						<p>Однако, есть конкретные отличия модулей от обычных приложений. О них расписано ниже.</p>
 						<h3 id="pkgName">Имя пакета</h3>
-						<p>Имя пакета (package name) у модулей должно содержать &QUOT;<u>a2iga.module.&quot;</u> чтобы A2IGA распознал приложение как модуль.</p> 
+						<p>Имя пакета (package name) у модулей должно содержать &QUOT;<u>a2iga.module.&quot;</u> чтобы A2IGA распознал приложение как модуль.</p>
 						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> com.dev.<b>a2iga.module.</b>name</p>
 						<p title="Можно, конечно, но всё же рекомендуется первый вариант." class="card warning"><span class="ic ic-ok"></span> <b>a2iga.module.</b>modulename</p>
 						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> com.dev.a2igamodule.name</p>
@@ -83,6 +84,9 @@
 						<p class="text-primary">В A2IGA 10 наличие класса ModuleSettings не обязательно. В новой версии A2IGA появилась обработка ошибки при обращении к несущ. класу ModuleSettings.</p>
 						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> ModuleSettings.java (ну или ModuleSettings.kt)</p>
 						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> ModulePreferences.java</p>
+					</div>
+					<div class="col-12">
+						<h2 id="structure">Структура модуля</h2>
 					</div>
 				</div>
 			</div>
@@ -117,7 +121,9 @@
 			</div>
 		</footer>
 
-		<script src="../assets/script/k19_themeEngine.js"></script>
+		<script src="../../../assets/script/k19_themeEngine.js"></script>
+		<script src="../../../assets/script/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 
 	</body>
 </html>

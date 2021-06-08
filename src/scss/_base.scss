@@ -14,10 +14,10 @@
      -moz-box-sizing: border-box;
        -o-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  // -webkit-user-select: none;
+  //    -moz-user-select: none;
+  //     -ms-user-select: none;
+  //         user-select: none;
   outline: none;
 }
 
@@ -107,7 +107,7 @@ img {
 	object-fit: scale-down;
 
   &.round { @include setBorderRadius(100%); }
-  &.rounded { @include setBorderRadius(); }
+  &.rounded { @include setBorderRadius(6px); }
 
 	& ~ small {
 
