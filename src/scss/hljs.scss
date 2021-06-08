@@ -6,7 +6,7 @@
 pre.hljs {
 
 	color: #abb2bf;
-	background: #282c34;
+	background: #242529;
   overflow-y: hidden;
   padding: 0 1em;
 
@@ -19,13 +19,13 @@ pre.hljs {
        tab-size: $tab-size;
 
 	&::-webkit-scrollbar-track {
-		 background: #282c34;
+		 background: #242529;
 		 @include setBorderRadius();
 	}
 
 	&::-webkit-scrollbar-thumb {
 		background-color: #abb2bf;
-		border: 5px solid #282c34;
+		border: 5px solid #242529;
 	}
 
 }

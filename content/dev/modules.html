@@ -21,10 +21,11 @@
 		<meta name="msapplication-navbutton-color" content="#313236">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#313236">
-		<link rel="stylesheet" href="../../../build/css/kalium.css">
-		<link rel="stylesheet" href="../../../build/css/styles.css">
-		<link rel="stylesheet" href="../../../fontello/css/icons.css">
-		<link rel="stylesheet" href="../../../build/css/hljs.css">
+		<link rel="stylesheet" href="../../build/css/kalium.css">
+		<link rel="stylesheet" href="../../build/css/styles.css">
+		<link rel="stylesheet" href="../../build/css/hljs.css">
+		<link rel="stylesheet" href="../../fontello/css/icons.css">
+		<link rel="stylesheet" href="../../fontello/css/animation.css">
 		<title>Модули / Для разработчиков / A2IGA</title>
 	</head>
   <body>
@@ -91,17 +92,17 @@
 						<p>Для этого необходимо в файле <i>AndroidManifest.xml</i> прописать:</p>
 						<pre class="hljs"><code>
 &lt;activity
-  android:name=&quot;.ModuleLaunch&quot; &lt;!-- Запускаемы класс -->
-  android:label=&quot;Module Name&quot;&gt;
 	android:noHistory=&quot;true&quot;
 	android:excludeFromRecents=&quot;true&quot;
-  android:finishOnCloseSystemDialogs=&quot;true&quot;
-  android:launchMode=&quot;singleInstance&quot;
+	android:finishOnCloseSystemDialogs=&quot;true&quot;
+	android:launchMode=&quot;singleInstance&quot;
+	android:name=&quot;.ModuleLaunch&quot;
+	android:label=&quot;@string/activity_main&quot;&gt;
 
-  &lt;intent-filter&gt;
-    &lt;action android:name=&quot;android.intent.action.MAIN&quot;/&gt;
-    &lt;category android:name=&quot;android.intent.category.DEFAULT&quot;/&gt;
-  &lt;/intent-filter&gt;
+	&lt;intent-filter&gt;
+		&lt;action android:name=&quot;android.intent.action.MAIN&quot;/&gt;
+		&lt;category android:name=&quot;android.intent.category.DEFAULT&quot;/&gt;
+	&lt;/intent-filter&gt;
 
 &lt;/activity&gt;
 						</code></pre>
@@ -166,6 +167,7 @@
 
 &lt;/manifest&gt;
 						</code></pre>
+						<p>... <span class="ic ic-spin2 animate-spin"></span></p>
 					</div>
 				</div>
 			</div>
