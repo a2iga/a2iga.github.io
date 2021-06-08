@@ -2,8 +2,6 @@
 
 @import "mixin/_mixins";
 @import "_vars";
-@import '_palette';
-@import 'function/function';
 
 pre.hljs {
 
@@ -14,7 +12,7 @@ pre.hljs {
 
   @include setBorderRadius(.5em);
 
-  $tab-size: 0;
+  $tab-size: 2;
   -moz-tab-size: $tab-size;
    -ms-tab-size: $tab-size;
     -o-tab-size: $tab-size;
@@ -22,7 +20,8 @@ pre.hljs {
 
 	&::-webkit-scrollbar-track {
 		 background: #282c34;
-		 @include setBorderRadius();}
+		 @include setBorderRadius();
+	}
 
 	&::-webkit-scrollbar-thumb {
 		background-color: #abb2bf;
@@ -52,7 +51,7 @@ pre.hljs {
 }
 
 .hljs-literal {
-	color:#56b6c2
+	color:#565dc2
 }
 
 .hljs-addition,
