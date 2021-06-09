@@ -11,6 +11,11 @@
 	color: var(--colorBackground);
 }
 
+.theme-oled .btnSetDarkTheme,
+.theme-oled .btnSetLightTheme {
+	opacity: 0.6;
+}
+
 ol {
 	padding-left: 1em;
 }
@@ -33,7 +38,7 @@ ol {
 		@include setBoxShadow(none);
 		padding: 1em 1.1em;
 	}
-	
+
 	&.info {
 
 		.theme-light & {
@@ -41,23 +46,25 @@ ol {
 			background-color: map-get-strict($light-blue-palette, 100);
 		}
 
-		.theme-dark & {	
+		.theme-dark &,
+		.theme-oled & {
 			color: map-get-strict($light-blue-palette, 100);
-			background-color: map-get-strict($light-blue-palette, 900);	
+			background-color: map-get-strict($light-blue-palette, 900);
 		}
 
 	}
 
 	&.danger {
-		
+
 		.theme-light & {
 			color: map-get-strict($red-palette, 900);
 			background-color: map-get-strict($red-palette, 100);
 		}
 
-		.theme-dark & {	
+		.theme-dark &,
+		.theme-oled & {
 			color: map-get-strict($red-palette, 50);
-			background-color: map-get-strict($red-palette, 900);	
+			background-color: map-get-strict($red-palette, 900);
 		}
 
 	}
@@ -69,23 +76,25 @@ ol {
 			background-color: map-get-strict($green-palette, 100);
 		}
 
-		.theme-dark & {	
+		.theme-dark &,
+		.theme-oled & {
 			color: map-get-strict($green-palette, 50);
-			background-color: map-get-strict($green-palette, 900);	
+			background-color: map-get-strict($green-palette, 900);
 		}
 
 	}
 
 	&.warning {
-		
+
 		.theme-light & {
 			color: map-get-strict($amber-palette, 900);
 			background-color: map-get-strict($amber-palette, 100);
 		}
 
-		.theme-dark & {	
+		.theme-dark &,
+		.theme-oled & {
 			color: map-get-strict($amber-palette, 50);
-			background-color: map-get-strict($amber-palette, 900);	
+			background-color: map-get-strict($amber-palette, 900);
 		}
 
 	}
@@ -93,21 +102,30 @@ ol {
 }
 
 footer {
-	
+
 	padding-bottom: 1em;
 
 	.theme-light & {	background-color: #cecece;	}
 	.theme-dark & {	background-color: #181a1b;	}
-	
+	.theme-oled & { border-top: 2px solid var(--colorDivider); }
+
 }
 
 header {
 	background-color: var(--colorSurface);
 	//border-bottom: 1px solid var(--colorDivider);
+	.theme-oled & {
+		background-color: #000;
+		border-bottom: 2px solid var(--colorDivider);
+	}
 }
 
 .anim-topToBottom {
   animation: moveUpWithFade 1s ease-out infinite;
+}
+
+.anim-bottomToTop {
+  animation: moveDownWithFade 1s ease-out infinite;
 }
 
 @keyframes moveUpWithFade {
@@ -125,6 +143,25 @@ header {
   }
   to {
     transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveDownWithFade {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(80%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0%);
     opacity: 0;
   }
 }

@@ -32,6 +32,26 @@
 		<header>
 			<div class="container">
 				<div class="row">
+					<!-- <div class="col-12">
+						<h5 onclick="updateUserName()" id="userName">Нажмите, чтобы поменять свой ник</h5>
+						<script>
+							let el_userName = document.getElementById('userName');
+							let userName = localStorage.getItem('userName');
+
+							if (userName != null) {
+								el_userName.style.display = "none"
+							}
+
+							function updateUserName() {
+								var a = prompt("Введите Ваш ник:");
+								localStorage.setItem('userName', a);
+								el_userName.style.display = "none"
+							}
+
+							let el = document.querySelector('.name');
+							el.innerHTML = userName;
+						</script>
+					</div> -->
 					<div class="col-12 col-md-8">
 						<h5>Новости сайта</h5>
 						<template id="news_temp">
@@ -45,7 +65,7 @@
 						<p><span class="text-primary"><дата не назн.></span> &ndash; релиз lib-a2iga 1.0</p>
 					</div>
 					<div class="col-12">
-						<p class="card info"><span class="ic ic-cog"></span> <b>Сайт всё еще в разработке!</b> Возможны какие-либо недочеты и упущенные "Lorem ipsum".</p>
+						<p class="card info"><span class="ic ic-cog"></span> <span class="name"></span> <b>Сайт всё еще в разработке!</b> Возможны какие-либо недочеты и упущенные "Lorem ipsum".</p>
 						<p class="text-muted anim-topToBottom text-align_center"><span class="ic ic-down"></span></p>
 					</div>
 				</div>
@@ -109,10 +129,14 @@
 		<footer>
 			<div class="container">
 				<div class="row">
+					<!-- <div class="col-12">
+						<br>
+						<p onclick="location.href='#'" class="text-muted anim-bottomToTop text-align_center"><span class="ic ic-up"></span></p>
+					</div> -->
 					<div class="col-12 col-md-4 order-md-1">
 						<br>
 						<div class="card">
-							<h5>Тема сайта</h5>
+							<h5><span class="ic ic-cog" onclick="alert('OLED тема разблокирована!');setTheme('theme-oled')"></span> Тема сайта</h5>
 							<p>Если Вам "бьет" в глаза светлая тема в темноте, то рекомендую сменить тему на тёмную.</p>
 							<div class="group block">
 								<button class="btnSetLightTheme" onclick="setTheme('theme-light')">Светлая</button>

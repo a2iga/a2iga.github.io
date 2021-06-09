@@ -26,6 +26,17 @@ $k-theme: (
 		colorDivider: map-get-strict($grey-palette, 800),
 		scrollbar: #202124,
 		scrollbarThumb: map-get-strict($grey-palette, 600),
+	),
+
+	oled: (
+		colorPrimary: map-get-strict($indigo-palette, 100),
+		colorSecondary: map-get-strict($indigo-palette, 500),
+		colorFont: map-get-strict($grey-palette, A100),
+		colorBackground: #000000,
+		colorSurface: #0f0f0f,
+		colorDivider: #0f0f0f,
+		scrollbar: #000,
+		scrollbarThumb: map-get-strict($grey-palette, 600),
 	)
 
 );
