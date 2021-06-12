@@ -1,7 +1,7 @@
 var data = [
 	{ 
-		news: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quae quisquam necessitatibus exercitationem porro nisi repudiandae beatae sunt accusamus laudantium quas laborum, labore officiis, nulla dolor molestias incidunt quo sequi.", 
-		date: "Пт, 1 янв." 
+		news: "релиз A2IGA 10.",
+                date: "Сб, 12 июн." 
 	},{
 		news: "перенос сайта (+ перепись) на базу фреймворка Kalium19.", 
 		date: "Пн, 7 июн." 
