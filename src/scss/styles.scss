@@ -6,14 +6,11 @@
 @import 'function/function';
 
 .theme-dark .btnSetDarkTheme,
-.theme-light .btnSetLightTheme {
+.theme-light .btnSetLightTheme,
+.theme-oled .btnSetOledTheme {
 	background-color: var(--colorPrimary);
 	color: var(--colorBackground);
-}
-
-.theme-oled .btnSetDarkTheme,
-.theme-oled .btnSetLightTheme {
-	opacity: 0.6;
+	cursor: default;
 }
 
 ol {
