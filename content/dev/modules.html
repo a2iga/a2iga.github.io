@@ -34,7 +34,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h5>Раздел</h5>
+						<h5><span class="ic ic-code"></span> Раздел</h5>
 						<h1><span class="text-primary">dev/</span>modules</h1>
 						<p>Документация для разработчиков модулей A2IGA, в которой расписана спецификация и стандарты написания модулей.</p><br>
 						<div class="group">
@@ -71,7 +71,7 @@
 						</ol>
 					</div>
 					<div class="col-12 col-md-6">
-						<h4><span class="ic ic-code"></span> Класс "ModuleLaunch"</h4>
+						<h4><span class="ic ic-file-code"></span> Класс "ModuleLaunch"</h4>
 						<p>Класс <i>ModuleLaunch</i> является основным. По названию понятно, что A2IGA при вызове ассистента запускает именно этот класс, а название класса не должно именяться!</p>
 						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> ModuleLaunch.java (ну или ModuleLaunch.kt)</p>
 						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> ModuleStart.java</p>
@@ -79,7 +79,7 @@
 						<p title="Категорически нет!" class="card danger"><span class="ic ic-cancel"></span> RunModule.java</p>
 					</div>
 					<div class="col-12 col-md-6">
-						<h4><span class="ic ic-code"></span> Класс "ModuleSettings"</h4>
+						<h4><span class="ic ic-file-code"></span> Класс "ModuleSettings"</h4>
 						<p>Класс <i>ModuleSettings</i> является также обязательным, т.к. он запускается при нажатии на пункт "Настройки модуля" в A2IGA. Если модуль не содержит настроек, то лучшим решением будет сделать из ModuleSettings DialogFrament и сообщить пользователю о том, что настроек в модуле нет.</p>
 						<p class="text-primary">В A2IGA 10 наличие класса ModuleSettings не обязательно. В новой версии A2IGA появилась обработка ошибки при обращении к несущ. класу ModuleSettings.</p>
 						<p title="Идеальный вариант!" class="card success"><span class="ic ic-ok"></span> ModuleSettings.java (ну или ModuleSettings.kt)</p>
