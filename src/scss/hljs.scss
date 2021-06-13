@@ -1,6 +1,7 @@
 @use "sass:map";
 
 @import "mixin/_mixins";
+@import "function/function";
 @import "_vars";
 
 pre.hljs {
@@ -10,6 +11,11 @@ pre.hljs {
   overflow-y: hidden;
 	overflow-x: auto;
   padding: 0 1em;
+
+	.theme-oled & {
+		background: transparent;
+		border: 2px solid #242529;
+	}
 
   @include setBorderRadius(.5em);
 
