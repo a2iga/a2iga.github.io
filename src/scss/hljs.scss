@@ -8,6 +8,7 @@ pre.hljs {
 	color: #abb2bf;
 	background: #242529;
   overflow-y: hidden;
+	overflow-x: auto;
   padding: 0 1em;
 
   @include setBorderRadius(.5em);
