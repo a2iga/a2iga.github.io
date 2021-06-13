@@ -25,6 +25,8 @@
 .ic-info:before { content: '\e817'; } /* '' */
 .ic-warning:before { content: '\e818'; } /* '' */
 .ic-feather:before { content: '\e819'; } /* '' */
+.ic-calendar:before { content: '\e81a'; } /* '' */
+.ic-bookmark:before { content: '\e81b'; } /* '' */
 .ic-spin2:before { content: '\e831'; } /* '' */
 .ic-twitter:before { content: '\f099'; } /* '' */
 .ic-github:before { content: '\f09b'; } /* '' */
