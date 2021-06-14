@@ -197,10 +197,15 @@ header {
 .actionbar {
 
 	@extend %flex-row;
-	
+
 	margin-top: 2em;
 
 	.action {
 		cursor: pointer;
 	}
+
+}
+
+header h1 {
+	color: var(--colorPrimary);
 }
