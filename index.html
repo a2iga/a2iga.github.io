@@ -25,6 +25,8 @@
 		<link rel="stylesheet" href="build/css/styles.css">
 		<link rel="stylesheet" href="fontello/css/icons.css">
 		<link rel="stylesheet" href="fontello/css/animation.css">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163812022-3"></script>
+		<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-163812022-3");</script>
 		<title>A2IGA</title>
 	</head>
   <body>
@@ -32,6 +34,13 @@
 		<header>
 			<div class="container">
 				<div class="row">
+					<div class="col-12">
+						<div class="versionBlock">
+							<h5><span class="ic ic-flash"></span> <span id="projectName"></span></h5>
+							<span class="ic ic-download" disabled></span>
+						</div>
+						<hr>
+					</div>
 					<!-- <div class="col-12">
 						<h5 onclick="updateUserName()" id="userName">Нажмите, чтобы поменять свой ник</h5>
 						<script>
@@ -61,12 +70,10 @@
 					<div class="col-12 col-md-4">
 						<h5><span class="ic ic-calendar"></span> Мероприятия</h5>
 						<p disabled><i>В последнее время не было никаких мероприятий.</i></p>
+						<h5><span class="ic ic-flash-outline"></span> Последний релиз</h5>
+						<p>Актуальной на текущ. момент является версия A2IGA <span id="latestRelease" class="text-primary">...</span>.</p>
 					</div>
 					<div class="col-12">
-						<h5><span class="ic ic-flash"></span> Последний релиз</h5>
-						<p>Актуальной на текущ. момент является версия <b>A2IGA <span id="latestRelease">...</span></b>. Перейдите в раздел <span class="anchor" data-anchor="a2iga/">releases</span>, чтобы ознакомиться с релизом.</p>
-						<br>
-						<p class="card info"><span class="ic ic-cog"></span> <span class="name"></span> <b>Сайт всё еще в разработке!</b> Возможны какие-либо недочеты и упущенные "Lorem ipsum".</p>
 						<p class="text-muted anim-topToBottom text-align_center"><span class="ic ic-down"></span></p>
 					</div>
 				</div>
@@ -81,25 +88,25 @@
 						<h5><span class="ic ic-bookmark"></span> Разделы сайта</h5>
 					</div>
 					<div class="col-12 col-md-4">
-						<h2 class="anchor" data-anchor="a2iga/">releases</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum excepturi corrupti aliquam harum quaerat eligendi pariatur culpa eum voluptates nihil autem, aspernatur velit beatae maiores repellat qui sequi quas? Libero?</p>
+						<h2>Список релизов</h2>
+						<p>Список всех релизов и списков изменений проекта на одной странице. Отсюда можно скачать старую (если она вдруг понадобилась) и всегда свежую версию A2IGA.</p><br>
 						<img src="assets/img/preview_releases.webp" alt="" class="rounded"><br><br>
 						<button onclick="location.href='content/releases.html'">Подробнее <span class="ic ic-right"></span></button>
 					</div>
 					<div class="col-12 col-md-4">
-						<h2 class="anchor" data-anchor="a2iga/">blog</h2>
+						<h2>Блог</h2>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt beatae alias adipisci vitae! Quam cupiditate natus fugiat. Neque enim explicabo officiis. Adipisci vel quis distinctio impedit nulla, modi officiis tempora.</p>
 						<img src="assets/img/preview_blog.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/blog.html'">Подробнее <span class="ic ic-right"></span></button>
+						<button disabled onclick="location.href='content/blog.html'">Подробнее <span class="ic ic-right"></span></button>
 					</div>
 					<div class="col-12 col-md-4">
-						<h2 class="anchor" data-anchor="a2iga/">modules</h2>
+						<h2>Каталог модулей</h2>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt beatae alias adipisci vitae! Quam cupiditate natus fugiat. Neque enim explicabo officiis. Adipisci vel quis distinctio impedit nulla, modi officiis tempora.</p>
 						<img src="assets/img/preview_modules.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/modules.html'">Подробнее <span class="ic ic-right"></span></button>
+						<button disabled onclick="location.href='content/modules.html'">Подробнее <span class="ic ic-right"></span></button>
 					</div>
 					<div class="col-12 col-md-4" hidden>
-						<h2 class="anchor" data-anchor="a2iga/">docs</h2>
+						<h2>docs</h2>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt beatae alias adipisci vitae! Quam cupiditate natus fugiat. Neque enim explicabo officiis. Adipisci vel quis distinctio impedit nulla, modi officiis tempora.</p>
 						<img src="assets/img/thumb_2.webp" alt="" class="rounded"><br><br>
 						<button onclick="location.href='content/docs.html'">Подробнее <span class="ic ic-right"></span></button>
@@ -110,14 +117,14 @@
 					</div>
 					<!-- TODO: Дописать документацию по модулям -->
 					<div class="col-12 col-md-4">
-						<h2 class="anchor" data-anchor="dev/">modules</h2>
+						<h2>Разработка модулей</h2>
 						<p>Документация для разработчиков модулей A2IGA, в которой расписана спецификация и стандарты написания модулей.</p>
 						<img src="assets/img/thumb_modules.webp" alt="" class="rounded"><br><br>
 						<button onclick="location.href='content/dev/modules.html'">Подробнее <span class="ic ic-spin2 animate-spin"></span></button>
 					</div>
 					<!-- TODO: Дописать документацию по библиотеке lib-a2iga -->
-					<div class="col-12 col-md-4" disabled>
-						<h2 class="anchor" data-anchor="dev/">lib</h2>
+					<div class="col-12 col-md-4" hidden>
+						<h2>lib</h2>
 						<p>Документация по библиотеке <a href="https://github.com/a2iga/lib">lib-a2iga</a>, которая должна помочь разработчикам интегрировать свои приложения в A2IGA одной строчкой кода (ну или больше 🧔).</p>
 						<img src="assets/img/thumb_lib.webp" alt="" class="rounded"><br><br>
 						<button onclick="location.href='content/dev/lib.html'">Подробнее <span class="ic ic-spin2 animate-spin"></span></button>

@@ -5,6 +5,15 @@
 @import '_palette';
 @import 'function/function';
 
+%flex-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: center;
+}
+
 .theme-dark .btnSetDarkTheme,
 .theme-light .btnSetLightTheme,
 .theme-oled .btnSetOledTheme {
@@ -169,3 +178,29 @@ header {
 }
 @-webkit-keyframes blink { 50% { color: transparent; }}
         @keyframes blink { 50% { color: transparent; }}
+
+
+.versionBlock {
+
+	@extend %flex-row;
+
+	& #projectName:after {
+
+		content: "A2IGA";
+		@media (min-width: 768px) {
+			content: "Any app instead Google Assistant";
+		}
+	}
+
+}
+
+.actionbar {
+
+	@extend %flex-row;
+	
+	margin-top: 2em;
+
+	.action {
+		cursor: pointer;
+	}
+}
