@@ -180,20 +180,6 @@ header {
         @keyframes blink { 50% { color: transparent; }}
 
 
-.versionBlock {
-
-	@extend %flex-row;
-
-	& #projectName:after {
-
-		content: "A2IGA";
-		@media (min-width: 768px) {
-			content: "Any app instead Google Assistant";
-		}
-	}
-
-}
-
 .actionbar {
 
 	@extend %flex-row;
@@ -202,6 +188,16 @@ header {
 
 	.action {
 		cursor: pointer;
+	}
+
+}
+
+#projectName:after {
+
+	content: "A2IGA";
+
+	@media (min-width: 768px) {
+		content: "Any app instead Google Assistant";
 	}
 
 }
