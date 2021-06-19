@@ -66,7 +66,7 @@
 					</div>
 					<div class="col-12 col-md-4">
 						<h5><span class="ic ic-calendar"></span> Мероприятия</h5>
-						<p disabled><i>В последнее время не было никаких мероприятий.</i></p>
+						<p>В ближ. время должен состояться релиз юбилейной версии A2IGA 10!</p>
 						<h5><span class="ic ic-flash-outline"></span> Последний релиз</h5>
 						<p>Актуальной на текущ. момент является версия A2IGA <span id="latestRelease" class="text-primary" title="Нажмите, чтобы перейти на страницу загрузки">...</span>.</p>
 					</div>
@@ -81,6 +81,14 @@
 		<main>
 			<div class="container">
 				<div class="row">
+					<div class="col-12">
+						<br>
+						<div class="card" id="coockiesMsg">
+							<h5><span class="ic ic-info"></span> Какие-то куки.</h5>
+							<p>Сайт может хранить какие-то ваши куки и типо надо уведомлять пользователей об этом. Если Вы уведомлены, то просто кликните по этому сообщению и оно скроется.</p>
+							<button>Скрыть уведомление</button>
+						</div>
+					</div>
 					<div class="col-12">
 						<h5><span class="ic ic-bookmark"></span> Разделы сайта</h5>
 					</div>
@@ -163,6 +171,8 @@
 		<script src="assets/script/k19_themeEngine.js"></script>
 		<script src="assets/script/news.js"></script>
 		<script src="assets/script/latestRelease.js"></script>
+
+		<script>let a=document.getElementById("coockiesMsg");a.onclick=function(){localStorage.setItem("coockiesMsgHidden","true"),a.style.display="none"},"true"===localStorage.getItem("coockiesMsgHidden")?a.style.display="none":a.style.display="block";</script>
 
 	</body>
 </html>

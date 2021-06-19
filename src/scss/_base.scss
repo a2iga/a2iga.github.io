@@ -191,7 +191,8 @@ legend {
   font: inherit;
 }
 
-[hidden] { display: none !important; }
+[hidden],
+[hidden="true"] { display: none !important; }
 
 [disabled] {
   pointer-events: none;
