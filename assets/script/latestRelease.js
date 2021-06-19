@@ -8,6 +8,9 @@ fetch('https://raw.githubusercontent.com/a2iga/a2iga/main/ota.json')
 		console.log(json);
 
     latestReleaseEl.innerHTML = json.versionName + "." + json.versionCode;
+		latestReleaseEl.onclick = function() {
+			location.href = 'https://github.com/a2iga/a2iga/releases/tag/' + json.versionCode;
+		}
 
   }
 );
