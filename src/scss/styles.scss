@@ -26,12 +26,17 @@ ol {
 	padding-left: 1em;
 }
 
+.q {
+	background: url("../../assets/img/preview_releases.webp");
+}
+
 .card {
 
 	$transition:
 		color .30s,
 		background-color .30s,
-		box-shadow .30s;
+		box-shadow .30s,
+		transform .30s;
 
 	background-color: var(--colorSurface);
 	padding: 1.3em 1.5em;
@@ -45,9 +50,16 @@ ol {
 
 	&.active {
 
+		cursor: pointer;
+
 		&:hover {
 
 			background-color: var(--colorSecondary);
+			-moz-transform: scale(1.015);
+			-ms-transform: scale(1.015);
+			-webkit-transform: scale(1.015);
+			-o-transform: scale(1.015);
+			transform: scale(1.015);
 
 			@include setBoxShadow(0px 10px 20px -5px rgba(0, 0, 0, 0.25));
 
@@ -55,7 +67,14 @@ ol {
 
 		&:active {
 
+			$scale: 1.005;
+
 			background-color: var(--colorPrimary);
+			-moz-transform: scale($scale);
+			-ms-transform: scale($scale);
+			-webkit-transform: scale($scale);
+			-o-transform: scale($scale);
+			transform: scale($scale);
 
 			.theme-light & { color: map-get-strict($grey-palette, 50); }
 

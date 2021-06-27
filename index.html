@@ -83,33 +83,32 @@
 				<div class="row">
 					<div class="col-12">
 						<br>
-						<div class="card" id="coockiesMsg">
+						<div class="card active" id="coockiesMsg">
 							<h5><span class="ic ic-info"></span> Какие-то куки</h5>
-							<p>Сайт может хранить какие-то ваши куки и типо надо уведомлять пользователей об этом. Если Вы уведомлены, то просто кликните по этому сообщению и оно скроется.</p>
-							<button>Скрыть уведомление</button>
+							<p k-margin="10px 0 0">Сайт может хранить какие-то ваши куки и типо надо уведомлять пользователей об этом. Если Вы уведомлены, то просто кликните по этому сообщению и оно скроется.</p>
+						</div>
+						<div class="card active" k-bg="/assets/img/img.jpeg" k-color="#ffffff" onclick="location.href='https://github.com/a2iga/a2iga/releases'">
+							<h5><span class="ic ic-download"></span> Релизы</h5>
+							<p>Список релизов и списков изменений проекта на одной странице. Отсюда можно скачать старую (если она вдруг понадобилась) и всегда свежую версию A2IGA.</p>
+							<p class="text-muted" k-margin="10px 0 0"><span class="ic ic-info"></span> Нажмите на эту карточку, чтобы перейти на страницу релизов на Github (будет выполнен переход на сторонний сайт).</p>
 						</div>
 					</div>
 					<div class="col-12">
 						<h5><span class="ic ic-bookmark"></span> Разделы сайта</h5>
+						<p class="card info"><span class="ic ic-info"></span> На данный момент эта категория дорабатывается, а разделы скрыты.</p>
 					</div>
-					<div class="col-12 col-md-4">
-						<h2>Релизы</h2>
-						<p>Список релизов и списков изменений проекта на одной странице. Отсюда можно скачать старую (если она вдруг понадобилась) и всегда свежую версию A2IGA.</p><br>
-						<img src="assets/img/preview_releases.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='https://github.com/a2iga/a2iga/releases'">Подробнее <span class="ic ic-right"></span></button>
-					</div>
-					<div class="col-12 col-md-4" disabled>
+					<!-- <div class="col-12 col-md-4">
 						<h2>Каталог модулей</h2>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt beatae alias adipisci vitae! Quam cupiditate natus fugiat. Neque enim explicabo officiis. Adipisci vel quis distinctio impedit nulla, modi officiis tempora.</p>
 						<img src="assets/img/preview_modules.webp" alt="" class="rounded"><br><br>
 						<button onclick="location.href='content/modules.html'">Подробнее <span class="ic ic-right"></span></button>
 					</div>
-					<div class="col-12 col-md-4" hidden>
+					<div class="col-12 col-md-4">
 						<h2>Блог</h2>
 						<p>Небольшой блог разработчика A2IGA. Редко что-то публикуется, но раздел существует.</p>
-						<img src="assets/img/preview_blog.webp" alt="" class="rounded"><br><br>
+						<img src="assets/img/thumb_blog.webp" alt="" class="rounded"><br><br>
 						<button onclick="location.href='content/blog.html'">Подробнее <span class="ic ic-right"></span></button>
-					</div>
+					</div> -->
 					<!-- Разделы для разработчиков -->
 					<div class="col-12">
 						<h5><span class="ic ic-code"></span> Для разработчиков</h5>
@@ -175,6 +174,7 @@
 			</div>
 		</footer>
 
+		<script src="assets/script/k19_cattrs.js"></script>
 		<script src="assets/script/k19_themeEngine.js"></script>
 		<script src="assets/script/news.js"></script>
 		<script src="assets/script/latestRelease.js"></script>
