@@ -1,0 +1,21 @@
+
+						<div class="card active" onclick="location.href=''" disabled>
+							<h5><span class="ic ic-flash"></span> A2IGA 0.10</h5>
+							<p></p>
+							<p class="text-muted" style="margin-bottom: 0;"><span class="ic ic-info"></span> Версия находится в разработке.</p>
+						</div><!-- 0.10 -->
+						<div class="card active" onclick="location.href='https://github.com/a2iga/a2iga/releases/tag/210513'">
+							<h5><span class="ic ic-flash"></span> A2IGA 9.210513</h5>
+							<p class="text-muted" style="margin-bottom: 0;"><span class="ic ic-info"></span> Нажмите на эту карточку, чтобы перейти на страницу загрузки.</p>
+						</div><!-- 9.210513 -->
+						<div class="card active" onclick="location.href='https://github.com/a2iga/a2iga/releases/tag/210403'">
+							<h5><span class="ic ic-flash"></span> A2IGA 8.210403 (reborn)</h5>
+							<p class="text-muted" style="margin-bottom: 0;"><span class="ic ic-info"></span> Нажмите на эту карточку, чтобы перейти на страницу загрузки.</p>
+						</div><!-- 8.210403 -->
+						<div class="card active" onclick="location.href='https://github.com/a2iga/a2iga/releases/tag/201127'">
+							<h5><span class="ic ic-flash"></span> A2IGA 7.201127</h5>
+							<p class="text-muted" style="margin-bottom: 0;"><span class="ic ic-info"></span> Нажмите на эту карточку, чтобы перейти на страницу загрузки.</p>
+						</div><!-- 7.201127 -->
+						<div class="card active" onclick="location.href='https://github.com/a2iga/a2iga/releases/tag/201028'">
+							<h5><span class="ic ic-flash"></span> A2IGA 6.201028</h5>
+						</div><!-- 6.201028 -->

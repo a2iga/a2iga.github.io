@@ -28,6 +28,11 @@ ol {
 
 .card {
 
+	$transition:
+		color .30s,
+		background-color .30s,
+		box-shadow .30s;
+
 	background-color: var(--colorSurface);
 	padding: 1.3em 1.5em;
 	margin-top: 1em;
@@ -36,6 +41,47 @@ ol {
 
 	@include setBoxShadow(0px 5px 20px -10px rgba(0, 0, 0, 0.25));
 	@include setBorderRadius();
+	@include setTransition($transition);
+
+	&.active {
+
+		&:hover {
+
+			background-color: var(--colorSecondary);
+
+			@include setBoxShadow(0px 10px 20px -5px rgba(0, 0, 0, 0.25));
+
+		}
+
+		&:active {
+
+			background-color: var(--colorPrimary);
+
+			.theme-light & { color: map-get-strict($grey-palette, 50); }
+
+			.theme-dark &,
+			.theme-oled & { color: map-get-strict($grey-palette, 900); }
+
+		}
+
+	}
+
+	&.centered {
+
+		width: 100%;
+  	height: 60vh;
+		position: relative;
+		cursor: pointer;
+
+		div {
+			position: absolute;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+	}
 
 	&.info,
 	&.danger,
