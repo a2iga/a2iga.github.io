@@ -29,6 +29,7 @@
 		<link rel="stylesheet" href="build/css/styles.css">
 		<link rel="stylesheet" href="fontello/css/icons.css">
 		<link rel="stylesheet" href="fontello/css/animation.css">
+		<script src="assets/script/typed.min.js"></script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163812022-3"></script>
 		<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-163812022-3");</script>
 		<title>A2IGA</title>
@@ -38,38 +39,14 @@
 		<header>
 			<div class="container">
 				<div class="row">
-					<!-- <div class="col-12">
-						<h5 onclick="updateUserName()" id="userName">Нажмите, чтобы поменять свой ник</h5>
-						<script>
-							let el_userName = document.getElementById('userName');
-							let userName = localStorage.getItem('userName');
-
-							if (userName != null) {
-								el_userName.style.display = "none"
-							}
-
-							function updateUserName() {
-								var a = prompt("Введите Ваш ник:");
-								localStorage.setItem('userName', a);
-								el_userName.style.display = "none"
-							}
-
-							let el = document.querySelector('.name');
-							el.innerHTML = userName;
-						</script>
-					</div> -->
-
-					<div class="col-12 col-md-8">
-						<h5><span class="ic ic-list"></span> Новости сайта</h5>
-						<template id="news_temp">
-							<p><span id="date" class="text-primary"></span> &ndash; <span id="news"></span></p>
-						</template>
-					</div>
-					<div class="col-12 col-md-4">
-						<h5><span class="ic ic-calendar"></span> Мероприятия</h5>
-						<p>В ближ. время должен состояться релиз юбилейной версии A2IGA 10!</p>
-						<h5><span class="ic ic-flash-outline"></span> Последний релиз</h5>
-						<p>Актуальной на текущ. момент является версия A2IGA <span id="latestRelease" class="text-primary pointer" title="Нажмите, чтобы перейти на страницу загрузки">...</span>.</p>
+					<div class="col-12">
+						<br>
+						<center>
+							<span class="ic ic-flash text-size68 text-primary"></span>
+							<h1>A2IGA</h1>
+							<p><b><span id="typed__apps"></span></b> всегда в быстром доступе!</p>
+							<script src="assets/script/typed.index.js"></script>
+						</center>
 					</div>
 					<div class="col-12">
 						<p class="text-muted anim-topToBottom text-align_center"><span class="ic ic-down"></span></p>
@@ -88,6 +65,7 @@
 							<h5><span class="ic ic-info"></span> Какие-то куки</h5>
 							<p k-margin="10px 0 0">Сайт может хранить какие-то ваши куки и типо надо уведомлять пользователей об этом. Если Вы уведомлены, то просто кликните по этому сообщению и оно скроется.</p>
 						</div>
+						
 						<div class="card active" k-bg="/assets/img/img.jpeg" k-color="#ffffff" onclick="location.href='https://github.com/a2iga/a2iga/releases'">
 							<h5><span class="ic ic-download"></span> Релизы</h5>
 							<p>Список релизов и списков изменений проекта на одной странице. Отсюда можно скачать старую (если она вдруг понадобилась) и всегда свежую версию A2IGA.</p>
@@ -136,8 +114,7 @@
 
 		<script src="assets/script/k19_cattrs.js"></script>
 		<script src="assets/script/k19_themeEngine.js"></script>
-		<script src="assets/script/news.js"></script>
-		<script async src="assets/script/latestRelease.js"></script>
+		<script src="assets/script/latestRelease.js"></script>
 
 		<script>let a=document.getElementById("coockiesMsg");a.onclick=function(){localStorage.setItem("coockiesMsgHidden","true"),a.style.display="none"},"true"===localStorage.getItem("coockiesMsgHidden")?a.style.display="none":a.style.display="block";</script>
 

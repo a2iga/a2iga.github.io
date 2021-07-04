@@ -29,3 +29,10 @@ for (var i = 0; i < data.length; i++) {
 	t.parentNode.appendChild(c);
 
 }
+
+<div class="col-12">
+						<h5><span class="ic ic-list"></span> Новости сайта</h5>
+						<template id="news_temp">
+							<p><span id="date" class="text-primary"></span> &ndash; <span id="news"></span></p>
+						</template>
+					</div>
