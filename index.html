@@ -21,10 +21,10 @@
 		<meta name="msapplication-navbutton-color" content="#313236">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#313236">
-		<link rel="apple-touch-icon" sizes="180x180" href="https://github.com/a2iga/a2iga.github.io/blob/master/assets/_favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="https://github.com/a2iga/a2iga.github.io/blob/master/assets/_favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="https://github.com/a2iga/a2iga.github.io/blob/master/assets/_favicon/favicon-16x16.png?raw=true">
-		<link rel="manifest" href="https://github.com/a2iga/a2iga.github.io/blob/master/assets/_favicon/site.webmanifest">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://github.com/a2iga/a2iga.github.io/blob/main/assets/_favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://github.com/a2iga/a2iga.github.io/blob/main/assets/_favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://github.com/a2iga/a2iga.github.io/blob/main/assets/_favicon/favicon-16x16.png?raw=true">
+		<link rel="manifest" href="https://github.com/a2iga/a2iga.github.io/blob/main/assets/_favicon/site.webmanifest">
 		<link rel="stylesheet" href="build/css/kalium.css">
 		<link rel="stylesheet" href="build/css/styles.css">
 		<link rel="stylesheet" href="fontello/css/icons.css">
@@ -58,6 +58,7 @@
 							el.innerHTML = userName;
 						</script>
 					</div> -->
+
 					<div class="col-12 col-md-8">
 						<h5><span class="ic ic-list"></span> Новости сайта</h5>
 						<template id="news_temp">
@@ -68,7 +69,7 @@
 						<h5><span class="ic ic-calendar"></span> Мероприятия</h5>
 						<p>В ближ. время должен состояться релиз юбилейной версии A2IGA 10!</p>
 						<h5><span class="ic ic-flash-outline"></span> Последний релиз</h5>
-						<p>Актуальной на текущ. момент является версия A2IGA <span id="latestRelease" class="text-primary" title="Нажмите, чтобы перейти на страницу загрузки">...</span>.</p>
+						<p>Актуальной на текущ. момент является версия A2IGA <span id="latestRelease" class="text-primary pointer" title="Нажмите, чтобы перейти на страницу загрузки">...</span>.</p>
 					</div>
 					<div class="col-12">
 						<p class="text-muted anim-topToBottom text-align_center"><span class="ic ic-down"></span></p>
@@ -93,47 +94,6 @@
 							<p class="text-muted" k-margin="10px 0 0"><span class="ic ic-info"></span> Нажмите на эту карточку, чтобы перейти на страницу релизов на Github (будет выполнен переход на сторонний сайт).</p>
 						</div>
 					</div>
-					<div class="col-12">
-						<h5><span class="ic ic-bookmark"></span> Разделы сайта</h5>
-						<p class="card info"><span class="ic ic-info"></span> На данный момент эта категория дорабатывается, а разделы скрыты.</p>
-					</div>
-					<!-- <div class="col-12 col-md-4">
-						<h2>Каталог модулей</h2>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt beatae alias adipisci vitae! Quam cupiditate natus fugiat. Neque enim explicabo officiis. Adipisci vel quis distinctio impedit nulla, modi officiis tempora.</p>
-						<img src="assets/img/preview_modules.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/modules.html'">Подробнее <span class="ic ic-right"></span></button>
-					</div>
-					<div class="col-12 col-md-4">
-						<h2>Блог</h2>
-						<p>Небольшой блог разработчика A2IGA. Редко что-то публикуется, но раздел существует.</p>
-						<img src="assets/img/thumb_blog.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/blog.html'">Подробнее <span class="ic ic-right"></span></button>
-					</div> -->
-					<!-- Разделы для разработчиков -->
-					<div class="col-12">
-						<h5><span class="ic ic-code"></span> Для разработчиков</h5>
-					</div>
-					<!-- TODO: Дописать документацию по модулям -->
-					<div class="col-12 col-md-4">
-						<h2>Разработка модулей</h2>
-						<p>Документация для разработчиков модулей A2IGA, в которой расписана спецификация и стандарты написания модулей.</p>
-						<img src="assets/img/thumb_modules.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/dev/modules.html'">Подробнее <span class="ic ic-right"></span></button>
-					</div>
-					<!-- TODO: Дописать документацию по интеграции приложений с A2IGA -->
-					<div class="col-12 col-md-4" hidden>
-						<h2>Интеграция приложений</h2>
-						<p>Небольшая документация для разработчиков приложений, желающих добавить кнопку "Интегрировать в A2IGA" в свои приложения.</p>
-						<img src="assets/img/thumb_1.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/dev/integration.html'">Подробнее <span class="ic ic-spin2 animate-spin"></span></button>
-					</div>
-					<!-- TODO: Дописать документацию по библиотеке lib-a2iga -->
-					<div class="col-12 col-md-4" hidden>
-						<h2>lib</h2>
-						<p>Документация по библиотеке <a href="https://github.com/a2iga/lib">lib-a2iga</a>, которая должна помочь разработчикам интегрировать свои приложения в A2IGA одной строчкой кода (ну или больше 🧔).</p>
-						<img src="assets/img/thumb_lib.webp" alt="" class="rounded"><br><br>
-						<button onclick="location.href='content/dev/lib.html'">Подробнее <span class="ic ic-spin2 animate-spin"></span></button>
-					</div>
 				</div>
 			</div>
 			<br><br>
@@ -142,10 +102,6 @@
 		<footer>
 			<div class="container">
 				<div class="row">
-					<!-- <div class="col-12">
-						<br>
-						<p onclick="location.href='#'" class="text-muted anim-bottomToTop text-align_center"><span class="ic ic-up"></span></p>
-					</div> -->
 					<div class="col-12 col-md-4 order-md-1">
 						<br>
 						<div class="card">
@@ -159,6 +115,10 @@
 						</div>
 						<p style="padding: 0 1.2em" class="text-align_center" disabled><span class="ic ic-info"></span> Тема будет сохранена после закрытия вкладки в памяти браузера.</p>
 					</div>
+					<!-- <div class="col-12 col-md-4 order-md-1">
+						<h5><span class="ic ic-code"></span> Для разработчиков</h5>
+						<p><span class="ic ic-feather"></span> <a href="content/dev/modules.html">Разработка модулей</a> &mdash; документация для разработчиков модулей A2IGA, в которой расписана спецификация и стандарты написания модулей.</p>
+					</div> -->
 					<div class="col-12 col-md-8 order-md-0">
 						<h5><span class="ic ic-flash"></span> <span id="projectName"></span></h5>
 						<p>Маленькая утилита, которая поможет заменить Google Assistant, вызываемый зажатием кнопки Home / жестом нижних краёв экрана (Android Q), на любое приложение, нужное вам.</p>
@@ -177,7 +137,7 @@
 		<script src="assets/script/k19_cattrs.js"></script>
 		<script src="assets/script/k19_themeEngine.js"></script>
 		<script src="assets/script/news.js"></script>
-		<script src="assets/script/latestRelease.js"></script>
+		<script defer src="assets/script/latestRelease.js"></script>
 
 		<script>let a=document.getElementById("coockiesMsg");a.onclick=function(){localStorage.setItem("coockiesMsgHidden","true"),a.style.display="none"},"true"===localStorage.getItem("coockiesMsgHidden")?a.style.display="none":a.style.display="block";</script>
 

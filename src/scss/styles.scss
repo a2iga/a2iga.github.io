@@ -26,16 +26,12 @@ ol {
 	padding-left: 1em;
 }
 
-.q {
-	background: url("../../assets/img/preview_releases.webp");
-}
-
 .card {
 
 	$transition:
 		color .30s,
 		background-color .30s,
-		box-shadow .30s,
+		box-shadow .20s,
 		transform .30s;
 
 	background-color: var(--colorSurface);
@@ -269,4 +265,8 @@ header {
 
 header h1 {
 	color: var(--colorPrimary);
+}
+
+.pointer {
+	cursor: pointer;
 }
