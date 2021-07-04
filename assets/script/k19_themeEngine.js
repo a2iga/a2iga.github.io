@@ -23,6 +23,9 @@ const theme = {
 function setTheme(themeName) {
 	localStorage.setItem(theme.key, themeName);
 	document.documentElement.className = themeName;
+	if (themeName == theme.light) console.info("%c" + themeName, "color: #fff; background-color: #1a73e9")
+	if (themeName == theme.dark) console.info("%c" + themeName, "color: #202124; background-color: #8ab4f8")
+	if (themeName == theme.oled) console.info("%c" + themeName, "color: #fff; background-color: #000")
 }
 
 /* toggleTheme()
